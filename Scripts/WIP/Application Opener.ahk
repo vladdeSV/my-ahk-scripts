@@ -3,11 +3,20 @@ Run, explorer.exe
 return
 
 ^Numpad2::
-OpenApplication(Mailbird.exe, "C:\Program Files\Mailbird\Mailbird.exe")
+OpenApplication("Mailbird.exe", "C:\Program Files\Mailbird\")
+return
+
+^Numpad3::
+OpenApplication("voicemeeter8.exe", "C:\Program Files (x86)\VB\Voicemeeter\")
+return
+
+^Numpad4::
+OpenApplication("Spotify.exe", "C:\Users\Vladimirs Nordholm\AppData\Roaming\Spotify\")
 return
 
 ^Numpad5::
-OpenApplication(Discord.exe, "C:\Users\Vladimirs Nordholm\AppData\Local\Discord\Update.exe --processStart Discord.exe")
+;OpenApplicationExtra("Discord.exe", "C:\Users\Vladimirs Nordholm\AppData\Local\Discord\Update.exe --processStart Discord.exe")
+Run, C:\Users\Vladimirs Nordholm\AppData\Local\Discord\Update.exe --processStart Discord.exe
 return
 
 OpenApplication(ahkExe, fileLocation)
