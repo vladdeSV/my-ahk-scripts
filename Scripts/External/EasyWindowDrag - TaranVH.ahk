@@ -32,7 +32,7 @@ exitFullscreenForApplicationUnderMouse()
     WinRestore, %title%
 }
 
-Xbutton2::
+Xbutton1::
 {
     exitFullscreenForApplicationUnderMouse()
 
@@ -61,7 +61,7 @@ Xbutton2::
     }
 }
 
-Xbutton1::
+Xbutton2::
 {
     exitFullscreenForApplicationUnderMouse()
 
@@ -88,7 +88,7 @@ Xbutton1::
     
     Loop
     {
-        GetKeyState, KDE_Button, Xbutton1, P ; Break if button has been released
+        GetKeyState, KDE_Button, Xbutton2, P ; Break if button has been released
         If KDE_Button = U
             break
         
