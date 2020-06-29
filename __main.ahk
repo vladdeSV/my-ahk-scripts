@@ -17,4 +17,4 @@ SetWinDelay, 5 ; Adding this here fixed including external window resize and rep
 #Include Scripts/Hide Desktop Icons.ahk
 #Include Scripts/Virtual Desktop Switcher.ahk
 #Include Scripts/Application Opener.ahk
-#Include Scripts/Imported/EasyWindowDrag.ahk
+; Disabled until reposition Firefox works #Include Scripts/Imported/EasyWindowDrag.ahk
