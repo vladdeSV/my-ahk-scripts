@@ -12,3 +12,4 @@ IfExist, %I_Icon%
 #Include Scripts/CapsDelete.ahk
 #Include Scripts/Hide Desktop Icons.ahk
 #Include Scripts/Virtual Desktop Switcher.ahk
+#Include Scripts/Application Opener.ahk
