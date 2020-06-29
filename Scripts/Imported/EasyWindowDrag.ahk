@@ -10,8 +10,6 @@
 SetWinDelay, 5
 ; Sets "coordinate mode", see https://www.autohotkey.com/docs/commands/CoordMode.htm
 CoordMode, Mouse, Screen
-; Set icon to "double window"
-Menu, Tray, Icon, imageres.dll, 262
 ; Gui -DPIScale
 DllCall("SetThreadDpiAwarenessContext", "ptr", -3, "ptr")
 

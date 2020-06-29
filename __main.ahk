@@ -9,6 +9,9 @@ SetWorkingDir %A_ScriptDir%
 I_Icon = __icon.ico
 IfExist, %I_Icon%
   Menu, Tray, Icon, %I_Icon%
+Else
+  ; Set icon to "double window"
+  Menu, Tray, Icon, imageres.dll, 262
 
 ; Set delay after "windowing commands", see https://www.autohotkey.com/docs/commands/SetWinDelay.htm
 SetWinDelay, 5 ; Adding this here fixed including external window resize and reposition script
