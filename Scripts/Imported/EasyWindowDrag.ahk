@@ -36,7 +36,7 @@ Xbutton1::
 {
     exitFullscreenForApplicationUnderMouse()
 
-    currentHotkey = %A_thishotkey% ; For some reason, the current key needs to be stored in a variable
+    currentHotkey = %A_thishotkey%
 
     ; Get the initial mouse position and window id, and abort if the window is maximized
     MouseGetPos, KDE_X1, KDE_Y1, KDE_id
@@ -65,6 +65,8 @@ Xbutton2::
 {
     exitFullscreenForApplicationUnderMouse()
 
+    currentHotkey = %A_thishotkey%
+
     ; Get the initial mouse position and window id, and abort if the window is maximized
     MouseGetPos, KDE_X1, KDE_Y1, KDE_id
     WinGet, KDE_Win, MinMax, ahk_id %KDE_id%
@@ -88,7 +90,7 @@ Xbutton2::
     
     Loop
     {
-        GetKeyState, KDE_Button, Xbutton2, P ; Break if button has been released
+        GetKeyState, KDE_Button, %currentHotkey%, P ; Break if button has been released
         If KDE_Button = U
             break
         

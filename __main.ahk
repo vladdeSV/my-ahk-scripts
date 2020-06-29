@@ -13,3 +13,4 @@ IfExist, %I_Icon%
 #Include Scripts/Hide Desktop Icons.ahk
 #Include Scripts/Virtual Desktop Switcher.ahk
 #Include Scripts/Application Opener.ahk
+#Include Scripts/Imported/EasyWindowDrag.ahk
