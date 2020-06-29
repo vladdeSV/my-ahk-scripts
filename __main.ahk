@@ -1,6 +1,7 @@
 ﻿#NoEnv
 #Warn
 #SingleInstance force
+
 SendMode Input
 SetWorkingDir %A_ScriptDir%
 
@@ -8,6 +9,9 @@ SetWorkingDir %A_ScriptDir%
 I_Icon = __icon.ico
 IfExist, %I_Icon%
   Menu, Tray, Icon, %I_Icon%
+
+; Set delay after "windowing commands", see https://www.autohotkey.com/docs/commands/SetWinDelay.htm
+SetWinDelay, 5 ; Adding this here fixed including external window resize and reposition script
 
 #Include Scripts/CapsDelete.ahk
 #Include Scripts/Hide Desktop Icons.ahk

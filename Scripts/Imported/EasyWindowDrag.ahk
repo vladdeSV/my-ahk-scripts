@@ -1,10 +1,8 @@
 ; Easy Window Dragging and Resizing -- by Jonny, then TaranVH
 ; Original script: https://autohotkey.com/docs/scripts/EasyWindowDrag_(KDE).htm
 
-; Known issue:
-; TaranVH: does NOT work properly on systems with varying UI scaling from one monitor to the next. it just keep enlargening the window indefinitely as soon as it touches the dofferently scaled monitor. i have no idea how to fix this... further reading... https://www.autohotkey.com/boards/viewtopic.php?f=14&t=13810
+; Known issue (TaranVH): does NOT work properly on systems with varying UI scaling from one monitor to the next. it just keep enlargening the window indefinitely as soon as it touches the dofferently scaled monitor. i have no idea how to fix this... further reading... https://www.autohotkey.com/boards/viewtopic.php?f=14&t=13810
 
-#SingleInstance force
 #InstallKeybdHook
 #KeyHistory 500
 
