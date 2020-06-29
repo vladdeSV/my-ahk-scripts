@@ -1,4 +1,4 @@
-^!Numpad1::
+^Numpad1::
 	IfWinExist ahk_exe Discord.exe
 		WinShow ahk_exe Discord.exe
 	Else
@@ -8,23 +8,23 @@
 	WinActivate ahk_exe Discord.exe
 	return
 
-^!Numpad2::
+^Numpad2::
 	OpenApplication("Mailbird.exe", "C:\Program Files\Mailbird\")
 	return
 
-^!Numpad3::
+^Numpad3::
 	OpenApplication("Spotify.exe", "C:\Users\Vladimirs Nordholm\AppData\Roaming\Spotify\")
 	return
 
-^!Numpad4::
+^Numpad4::
 	OpenApplication("voicemeeter8.exe", "C:\Program Files (x86)\VB\Voicemeeter\")
 	return
 
-^!Numpad5::
+^Numpad5::
 	MsgBox, , , No application bound yet,
 	return
 
-^!Numpad6::
+^Numpad6::
 	Run, explorer.exe
 	return
 
