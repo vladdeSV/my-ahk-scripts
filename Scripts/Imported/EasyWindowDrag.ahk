@@ -28,7 +28,9 @@ exitFullscreenForApplicationUnderMouse()
     MouseGetPos, , , id, control
     WinGetTitle, title, ahk_id %id%
     WinGetClass, class, ahk_id %id%
+    WinGetPos, X, Y, Width, Height, %title%,,,
     WinRestore, %title%
+    WinMove, %title%,, X, Y , Width, Height,,
 }
 
 Xbutton2::
