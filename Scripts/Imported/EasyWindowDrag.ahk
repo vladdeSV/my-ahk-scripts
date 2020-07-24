@@ -5,7 +5,10 @@
 
 #InstallKeybdHook
 #KeyHistory 500
+#SingleInstance force
 
+; Set delay after "windowing commands", see https://www.autohotkey.com/docs/commands/SetWinDelay.htm
+SetWinDelay, 5 ; Adding this here fixed including external window resize and reposition script
 ; Set delay after "windowing commands", see https://www.autohotkey.com/docs/commands/SetWinDelay.htm
 SetWinDelay, 5
 ; Sets "coordinate mode", see https://www.autohotkey.com/docs/commands/CoordMode.htm
@@ -28,7 +31,7 @@ exitFullscreenForApplicationUnderMouse()
     WinRestore, %title%
 }
 
-Xbutton1::
+Xbutton2::
 {
     exitFullscreenForApplicationUnderMouse()
 
@@ -57,7 +60,7 @@ Xbutton1::
     }
 }
 
-Xbutton2::
+Xbutton1::
 {
     exitFullscreenForApplicationUnderMouse()
 
