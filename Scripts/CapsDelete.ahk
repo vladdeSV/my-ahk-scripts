@@ -1,3 +1,3 @@
 ﻿; Convert CapsLock to Delete
 
-CapsLock:: Send {Delete}
+CapsLock::Send "{Delete}"
