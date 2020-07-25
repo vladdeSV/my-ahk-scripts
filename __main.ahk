@@ -4,7 +4,7 @@
 SetWorkingDir A_ScriptDir
 
 ; Set application icon
-#Include "Scripts\__icon.ahk"
+#Include "__icon.ahk"
 
 ; Include scripts
 #Include "Scripts\CapsDelete.ahk"
