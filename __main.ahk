@@ -10,6 +10,7 @@ SetWorkingDir A_ScriptDir
 #Include "Scripts\CapsDelete.ahk"
 #Include "Scripts\Virtual Desktop Switcher.ahk"
 #Include "Scripts\Application Opener.ahk"
+#Include "Scripts\Quick Task View.ahk"
 
 ; Workaround to enable window resizing
 Run "Scripts\EasyWindowDrag.ahk"
