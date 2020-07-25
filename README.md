@@ -1,5 +1,5 @@
 # My AutoHotKey Scripts
-[![ahk version](https://img.shields.io/badge/ahk-2.0-brightgreen)]()
+[![ahk version](https://img.shields.io/badge/AHK-2.0-blue)]()
 
 A collection of my AutoHotKey v2 scripts which I use on the daily.
 
