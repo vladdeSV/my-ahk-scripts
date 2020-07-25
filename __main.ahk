@@ -12,4 +12,4 @@ SetWorkingDir A_ScriptDir
 #Include "Scripts\Application Opener.ahk"
 
 ; Workaround to enable window resizing
-Run "Scripts\Imported\EasyWindowDrag.ahk"
+Run "Scripts\EasyWindowDrag.ahk"
