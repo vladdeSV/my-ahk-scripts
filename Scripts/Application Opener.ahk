@@ -17,7 +17,7 @@
 
 ; Spotify
 ^Numpad3::{
-	OpenApplication("Spotify.exe", A_AppData . "\AppData\Roaming\Spotify\")
+	OpenApplication("Spotify.exe", A_AppData . "\Spotify\")
 }
 
 ; VoiceMeeter Potato
