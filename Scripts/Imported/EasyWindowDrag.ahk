@@ -16,101 +16,101 @@ DllCall("SetThreadDpiAwarenessContext", "ptr", -3, "ptr")
 
 restoreWindowUnderCursor()
 {
-    ; Get the window id under the cursor
-    MouseGetPos ,, WindowId
-    AhkWindowId := "ahk_id " . WindowId
+  ; Get the window id under the cursor
+  MouseGetPos ,, WindowId
+  AhkWindowId := "ahk_id " . WindowId
 
-    ; Get the fullscreen's position and size
-    WinGetClientPos X, Y, Width, Height, AhkWindowId
+  ; Get the fullscreen's position and size
+  WinGetClientPos X, Y, Width, Height, AhkWindowId
 
-    ; Exit fullscreen state
-    WinRestore AhkWindowId
+  ; Exit fullscreen state
+  WinRestore AhkWindowId
 
-    ; Set window size to which ever size it was before.
-    WinMove X, Y , Width, Height, AhkWindowId
+  ; Set window size to which ever size it was before.
+  WinMove X, Y , Width, Height, AhkWindowId
 }
 
 Xbutton2::
 {
-    restoreWindowUnderCursor()
+  restoreWindowUnderCursor()
 
-    ; Get the initial mouse position and window id, and abort if the window is maximized
-    MouseGetPos CursorX1, CursorY1, WindowUnderCursorId
-    IsCurrentWindoMaximized := WinGetMinMax("ahk_id " . WindowUnderCursorId)
-    if (IsCurrentWindoMaximized) {
-        return
+  ; Get the initial mouse position and window id, and abort if the window is maximized
+  MouseGetPos CursorX1, CursorY1, WindowUnderCursorId
+  IsCurrentWindoMaximized := WinGetMinMax("ahk_id " . WindowUnderCursorId)
+  if (IsCurrentWindoMaximized) {
+    return
+  }
+  
+  ; Get the initial window position.
+  WinGetPos WindowX1, WindowY1, , , "ahk_id " . WindowUnderCursorId
+  loop
+  {
+    ; Break if button has been released
+    if (GetKeyState(A_thishotkey, "P") == false) {
+      break
     }
     
-    ; Get the initial window position.
-    WinGetPos WindowX1, WindowY1, , , "ahk_id " . WindowUnderCursorId
-    loop
-    {
-        ; Break if button has been released
-        if (GetKeyState(A_thishotkey, "P") == false) {
-            break
-        }
-        
-        MouseGetPos CursorX2, CursorY2 ; Get the current mouse position
-        CursorX2 -= CursorX1 ; Obtain an offset from the initial mouse position
-        CursorY2 -= CursorY1
-        WindowX2 := (WindowX1 + CursorX2) ; Apply this offset to the window position
-        WindowY2 := (WindowY1 + CursorY2)
-        WinMove(WindowX2, WindowY2, , , "ahk_id " . WindowUnderCursorId) ; Move the window to the new position
-    }
+    MouseGetPos CursorX2, CursorY2 ; Get the current mouse position
+    CursorX2 -= CursorX1 ; Obtain an offset from the initial mouse position
+    CursorY2 -= CursorY1
+    WindowX2 := (WindowX1 + CursorX2) ; Apply this offset to the window position
+    WindowY2 := (WindowY1 + CursorY2)
+    WinMove(WindowX2, WindowY2, , , "ahk_id " . WindowUnderCursorId) ; Move the window to the new position
+  }
 }
 
 Xbutton1::
 {
-    restoreWindowUnderCursor()
+  restoreWindowUnderCursor()
 
-    ; Get the initial mouse position and window id, and abort if the window is maximized
-    MouseGetPos CursorX1, CursorY1, WindowUnderCursorId
-    IsCurrentWindoMaximized := WinGetMinMax("ahk_id " . WindowUnderCursorId)
-    if (IsCurrentWindoMaximized) {
-        return
+  ; Get the initial mouse position and window id, and abort if the window is maximized
+  MouseGetPos CursorX1, CursorY1, WindowUnderCursorId
+  IsCurrentWindoMaximized := WinGetMinMax("ahk_id " . WindowUnderCursorId)
+  if (IsCurrentWindoMaximized) {
+      return
+  }
+  
+  ; Get the initial window position and size
+  WinGetPos WindowX1, WindowY1, WindowW, WindowH, "ahk_id " . WindowUnderCursorId
+
+  ; Define the window region the mouse is currently in
+  ; The four regions are Up and Left, Up and Right, Down and Left, Down and Right
+  if (CursorX1 < WindowX1 + WindowW / 2) {
+    WindowLeft := 1
+  } else {
+    WindowLeft := -1
+  }
+  
+  if (CursorY1 < WindowY1 + WindowH / 2) {
+    WindowUp := 1
+  } else {
+    WindowUp := -1
+  }
+  
+  loop
+  {
+    ; Break if button has been released
+    if (GetKeyState(A_thishotkey, "P") == false) {
+      break
     }
     
-    ; Get the initial window position and size
+    MouseGetPos CursorX2, CursorY2 ; Get the current mouse position
+
+    ; Get the current window position and size
     WinGetPos WindowX1, WindowY1, WindowW, WindowH, "ahk_id " . WindowUnderCursorId
+    CursorX2 -= CursorX1 ; Obtain an offset from the initial mouse position
+    CursorY2 -= CursorY1
 
-    ; Define the window region the mouse is currently in
-    ; The four regions are Up and Left, Up and Right, Down and Left, Down and Right
-    if (CursorX1 < WindowX1 + WindowW / 2) {
-        WindowLeft := 1
-    } else {
-        WindowLeft := -1
-    }
+    ; Then, act according to the defined region
+    WinMove(
+      WindowX1 + (WindowLeft + 1) / 2 * CursorX2, ; X of resized window
+      WindowY1 + (WindowUp + 1) / 2 * CursorY2, ; Y of resized window
+      WindowW - WindowLeft * CursorX2, ; W of resized window
+      WindowH - WindowUp * CursorY2, ; H of resized window
+      "ahk_id " . WindowUnderCursorId
+    )
     
-    if (CursorY1 < WindowY1 + WindowH / 2) {
-        WindowUp := 1
-    } else {
-        WindowUp := -1
-    }
-    
-    Loop
-    {
-        ; Break if button has been released
-        if (GetKeyState(A_thishotkey, "P") == false) {
-            break
-        }
-        
-        MouseGetPos CursorX2, CursorY2 ; Get the current mouse position
-
-        ; Get the current window position and size
-        WinGetPos WindowX1, WindowY1, WindowW, WindowH, "ahk_id " . WindowUnderCursorId
-        CursorX2 -= CursorX1 ; Obtain an offset from the initial mouse position
-        CursorY2 -= CursorY1
-
-        ; Then, act according to the defined region
-        WinMove(
-            WindowX1 + (WindowLeft + 1) / 2 * CursorX2, ; X of resized window
-            WindowY1 + (WindowUp + 1) / 2 * CursorY2, ; Y of resized window
-            WindowW - WindowLeft * CursorX2, ; W of resized window
-            WindowH - WindowUp * CursorY2, ; H of resized window
-            "ahk_id " . WindowUnderCursorId
-        )
-        
-        CursorX1 := (CursorX2 + CursorX1) ; Reset the initial position for the next iteration
-        CursorY1 := (CursorY2 + CursorY1)
-    }
+    CursorX1 := (CursorX2 + CursorX1) ; Reset the initial position for the next iteration
+    CursorY1 := (CursorY2 + CursorY1)
+  }
 }
