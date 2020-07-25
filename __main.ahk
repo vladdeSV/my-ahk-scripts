@@ -1,7 +1,5 @@
-﻿#Warn
-#SingleInstance force
-
-SetWorkingDir A_ScriptDir
+﻿#SingleInstance force
+#Warn
 
 ; Set application icon
 #Include "__icon.ahk"
