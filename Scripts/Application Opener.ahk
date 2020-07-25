@@ -30,17 +30,17 @@
 	Run "explorer.exe"
 }
 
-OpenApplication(ahkExe, fileDirectory)
+OpenApplication(exe, fileDirectory)
 {
-	ahkExeName := "ahk_exe " . ahkExe
+	ahkExe := "ahk_exe " . exe
 
-	if (WinExist(ahkExeName)) {
-		WinActivate ahkExeName
+	if (WinExist(ahkExe)) {
+		WinActivate ahkExe
 	} else {
-		Run fileDirectory . ahkExe
+		Run fileDirectory . exe
 	}
 
-	WinWait ahkExeName
-	WinActivate ahkExeName
-	WinWaitActive ahkExeName
+	WinWait ahkExe
+	WinActivate ahkExe
+	WinWaitActive ahkExe
 }
