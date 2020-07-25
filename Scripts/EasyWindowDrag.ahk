@@ -30,6 +30,7 @@ restoreWindowUnderCursor()
   WinMove X, Y , Width, Height, AhkWindowId
 }
 
+; Move window
 Xbutton2::
 {
   restoreWindowUnderCursor()
@@ -59,6 +60,7 @@ Xbutton2::
   }
 }
 
+; Resize window
 Xbutton1::
 {
   restoreWindowUnderCursor()
