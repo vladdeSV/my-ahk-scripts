@@ -13,6 +13,8 @@ SetWinDelay 5 ; Adding this here fixed including external window resize and repo
 CoordMode "Mouse", "Screen"
 ; Gui -DPIScale
 DllCall("SetThreadDpiAwarenessContext", "ptr", -3, "ptr")
+; Set icon to "double window"
+TraySetIcon("SHELL32.dll", 160, 1)
 
 restoreWindowUnderCursor()
 {
