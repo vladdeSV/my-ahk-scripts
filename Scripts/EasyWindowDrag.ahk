@@ -23,7 +23,7 @@ restoreWindowUnderCursor()
   AhkWindowId := "ahk_id " . WindowId
 
   ; Get the fullscreen's position and size
-  WinGetClientPos X, Y, Width, Height, AhkWindowId
+  WinGetPos X, Y, Width, Height, AhkWindowId
 
   ; Exit fullscreen state
   WinRestore AhkWindowId
