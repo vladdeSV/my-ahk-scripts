@@ -35,6 +35,11 @@ restoreWindowUnderCursor()
 ; Move window
 Xbutton2::
 {
+  ; If pressing the other button, stop
+  if (GetKeyState("Xbutton1", "P") == true) {
+    return
+  }
+
   restoreWindowUnderCursor()
 
   ; Get the initial mouse position and window id, and abort if the window is maximized
@@ -48,6 +53,13 @@ Xbutton2::
   WinGetPos WindowX1, WindowY1, , , "ahk_id " . WindowUnderCursorId
   loop
   {
+    ; Fullscreen application if other mouse button is pressed
+    if (GetKeyState("Xbutton1", "P") == true) {
+      ; Get the window id under the cursor
+      WinMaximize "ahk_id " . WindowUnderCursorId
+      break
+    }
+
     ; Break if button has been released
     if (GetKeyState(A_thishotkey, "P") == false) {
       break
@@ -65,6 +77,11 @@ Xbutton2::
 ; Resize window
 Xbutton1::
 {
+  ; If pressing the other button, stop
+  if (GetKeyState("Xbutton2", "P") == true) {
+    return
+  }
+
   restoreWindowUnderCursor()
 
   ; Get the initial mouse position and window id, and abort if the window is maximized
