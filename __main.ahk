@@ -8,6 +8,7 @@
 #Include "Scripts\CapsDelete.ahk"
 #Include "Scripts\Application Opener.ahk"
 #Include "Scripts\Toggle Maximized.ahk"
+#Include "Scripts\AltGrShiftBraces.ahk"
 
 ; Workaround to enable window resizing
 Run "Scripts\EasyWindowDrag.ahk"
