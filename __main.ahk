@@ -7,7 +7,7 @@
 ; Include scripts
 #Include "Scripts\Application Opener.ahk"
 #Include "Scripts\Toggle Maximized.ahk"
-#Include "Scripts\AlternativeKeybinds.ahk"
+#Include "Scripts\Alternative Keybinds.ahk"
 
 ; Workaround to enable window resizing
 Run "Scripts\EasyWindowDrag.ahk"
