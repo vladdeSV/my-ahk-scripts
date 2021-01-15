@@ -30,6 +30,11 @@
   Run "files.exe"
 }
 
+; Visual Studio Code
+^Numpad6::{
+  OpenApplication("Code.exe", A_AppData . "\..\Local\Programs\Microsoft VS Code\")
+}
+
 OpenApplication(exe, fileDirectory)
 {
   ahkExe := "ahk_exe " . exe
