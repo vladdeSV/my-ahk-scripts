@@ -1,5 +1,5 @@
 ; Convert CapsLock to Delete
-CapsLock::Send "{Delete}"
+; *temporarily disabled* CapsLock::Send "{Delete}"
 
 ; Mimic keyboard shortcut on macOS
 !2::Send "@"
