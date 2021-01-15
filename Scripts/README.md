@@ -1,7 +1,7 @@
 # Summary
 Breif explanation of what each script does. Might not always be up do date with all scripts.
 
-## [Alternative Keybinds.ahk](/Scripts/Alternative Keybinds.ahk)
+## [Alternative Keybinds.ahk](/Scripts/Alternative%20Keybinds.ahk)
 - Changes the <kbd>Caps-Lock</kbd> key to <kbd>Delete</kbd>. Still possible to activate by holding down a modifier key, like <kbd>Ctrl</kbd>
 - Mimics some macOS keybinds (`{`, `}`, and `@`)
 
