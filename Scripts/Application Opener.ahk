@@ -27,7 +27,7 @@
 
 ; Explorer
 ^Numpad5::{
-  Run "explorer.exe"
+  Run "files.exe"
 }
 
 OpenApplication(exe, fileDirectory)
