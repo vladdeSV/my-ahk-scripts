@@ -1,5 +1,5 @@
 ; Discord
-^Numpad1::{
+F13::{
   if (WinExist("ahk_exe Discord.exe")) {
     WinShow "ahk_exe Discord.exe"
   } else {
@@ -11,27 +11,27 @@
 }
 
 ; Mailbird
-^Numpad2::{
+F14::{
   OpenApplication("Mailbird.exe", "C:\Program Files\Mailbird\")
 }
 
 ; Spotify
-^Numpad3::{
+F15::{
   OpenApplication("Spotify.exe", A_AppData . "\Spotify\")
 }
 
 ; VoiceMeeter Potato
-^Numpad4::{
+F16::{
   OpenApplication("voicemeeter8.exe", "C:\Program Files (x86)\VB\Voicemeeter\")
 }
 
 ; Explorer
-^Numpad5::{
+F17::{
   Run "explorer.exe"
 }
 
 ; Visual Studio Code
-^Numpad6::{
+F18::{
   OpenApplication("Code.exe", A_AppData . "\..\Local\Programs\Microsoft VS Code\")
 }
 
