@@ -35,6 +35,16 @@ F18::{
   OpenApplication("Code.exe", A_AppData . "\..\Local\Programs\Microsoft VS Code\")
 }
 
+; Sublime Merge
+F19::{
+  OpenApplication("sublime_merge.exe", "C:\Program Files\Sublime Merge\")
+}
+
+; Sublime Text
+F20::{
+  OpenApplication("sublime_text.exe", "C:\Program Files\Sublime Text 3\")
+}
+
 OpenApplication(exe, fileDirectory)
 {
   ahkExe := "ahk_exe " . exe
