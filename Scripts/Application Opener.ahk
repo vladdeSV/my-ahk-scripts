@@ -27,7 +27,7 @@
 
 ; Explorer
 ^Numpad5::{
-  Run "files.exe"
+  Run "explorer.exe"
 }
 
 ; Visual Studio Code
