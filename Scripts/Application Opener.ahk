@@ -45,6 +45,21 @@ F20::{
   OpenApplication("sublime_text.exe", "C:\Program Files\Sublime Text 3\")
 }
 
+; Task Manager
+F21::{
+  OpenApplication("Taskmgr.exe", "C:\Windows\System32\")
+}
+
+; Slack
+F22::{
+  OpenApplication("slack.exe", A_AppData . "\..\Local\slack\")
+}
+
+; Edge
+F23::{
+  OpenApplication("msedge.exe", "C:\Program Files (x86)\Microsoft\Edge\Application\")
+}
+
 OpenApplication(exe, fileDirectory)
 {
   ahkExe := "ahk_exe " . exe
