@@ -60,6 +60,11 @@ F23::{
   OpenApplication("msedge.exe", "C:\Program Files (x86)\Microsoft\Edge\Application\")
 }
 
+; Windows Terminal
+F24::{
+  OpenApplicationRaw("ahk_exe WindowsTerminal.exe", "wt")
+}
+
 OpenApplication(exe, fileDirectory)
 {
   OpenApplicationRaw("ahk_exe " . exe, fileDirectory . exe)
