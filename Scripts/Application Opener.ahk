@@ -62,12 +62,15 @@ F23::{
 
 OpenApplication(exe, fileDirectory)
 {
-  ahkExe := "ahk_exe " . exe
+  OpenApplicationRaw("ahk_exe " . exe, fileDirectory . exe)
+}
 
+OpenApplicationRaw(ahkExe, runCommand)
+{
   if (WinExist(ahkExe)) {
     WinActivate ahkExe
   } else {
-    Run fileDirectory . exe
+    Run runCommand
   }
 
   WinWait ahkExe
