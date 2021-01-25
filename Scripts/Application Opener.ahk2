@@ -28,15 +28,24 @@ OpenApplication(exe, fileDirectory)
   OpenApplicationRaw("ahk_exe " . exe, fileDirectory . exe)
 }
 
-OpenApplicationRaw(ahkExe, runCommand)
+OpenApplicationRaw(identifier, runCommand)
 {
-  if (WinExist(ahkExe)) {
-    WinActivate ahkExe
-  } else {
-    Run runCommand
-  }
+  windowHandleIds := WinGetList(identifier)
+  if (windowHandleIds.length !== 0) {
 
-  WinWait ahkExe
-  WinActivate ahkExe
-  WinWaitActive ahkExe
+    selectWindowIndex := 2
+
+    if (!WinActive(identifier)) {
+      selectWindowIndex := 1
+    }
+
+    if (windowHandleIds.length == 1) {
+      selectWindowIndex := 1
+    }
+
+    WinActivate("ahk_id " . windowHandleIds[selectWindowIndex])
+  } else {
+    Run(runCommand)
+    WinActivate(identifier)
+  }
 }
