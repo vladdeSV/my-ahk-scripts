@@ -7,7 +7,7 @@ F15::OpenApplication("Spotify.exe", A_AppData . "\Spotify\")
 ; VoiceMeeter Potato
 F16::OpenApplication("voicemeeter8.exe", EnvGet("ProgramFiles(x86)") . "\VB\Voicemeeter\")
 ; Explorer
-F17::Run "explorer.exe"
+F17::OpenApplicationRaw("ahk_class CabinetWClass", "explorer.exe")
 ; Visual Studio Code
 F18::OpenApplication("Code.exe", A_AppData . "\..\Local\Programs\Microsoft VS Code\")
 ; Sublime Merge
