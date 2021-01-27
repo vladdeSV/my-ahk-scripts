@@ -22,6 +22,10 @@ F22::OpenApplication("slack.exe", A_AppData . "\..\Local\slack\")
 F23::OpenApplication("msedge.exe", EnvGet("ProgramFiles(x86)") . "\Microsoft\Edge\Application\")
 ; Windows Terminal
 F24::OpenApplicationRaw("ahk_exe WindowsTerminal.exe", "wt")
+; iCUE
+!F14::OpenApplication("iCUE.exe", EnvGet("ProgramFiles(x86)") . "\Corsair\CORSAIR iCUE Software\")
+; Calculator
+!F15::OpenApplicationRaw("Calculator", "calc.exe")
 
 OpenApplication(exe, fileDirectory)
 {
