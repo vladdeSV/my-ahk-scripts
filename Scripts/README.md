@@ -14,9 +14,6 @@ Specific to my keyboard setup. I've bound my 6 macro keys to this.
 ## [EasyWindowDrag.ahk2](/Scripts/EasyWindowDrag.ahk2)
 Rewritten script which allows me to move and resize a window by only holding the cursor over the window and holding my Mouse4 or Mouse5.
 
-## [Toggle Maximized.ahk2](/Scripts/Toggle%20Maximized.ahk2)
-Allows me to instantly maximize or unmaximize a window.
-
 # Binned
 Scripts I no longer use. Lies under `Binned`.
 
@@ -25,3 +22,6 @@ Allows me to open Task View in a different way.
 
 ## [Virtual Desktop Switcher.ahk2](/Scripts/Virtual%20Desktop%20Switcher.ahk2)
 Quickly move between virtual virtual desktops.
+
+## [Toggle Maximized.ahk2](/Scripts/Toggle%20Maximized.ahk2)
+Allows me to instantly maximize or unmaximize a window. Replaced by addition of partially same feature in [EasyWindowDrag.ahk2](#easywindowdragahk2).

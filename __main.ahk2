@@ -6,7 +6,6 @@
 
 ; Include scripts
 #Include "Scripts\Application Opener.ahk2"
-#Include "Scripts\Toggle Maximized.ahk2"
 #Include "Scripts\Alternative Keybinds.ahk2"
 
 ; Workaround to enable window resizing
