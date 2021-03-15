@@ -22,6 +22,8 @@ F22::OpenApplication("slack.exe", A_AppData . "\..\Local\slack\")
 F23::OpenApplication("msedge.exe", EnvGet("ProgramFiles(x86)") . "\Microsoft\Edge\Application\")
 ; Windows Terminal
 F24::OpenApplicationRaw("ahk_exe WindowsTerminal.exe", "wt")
+; TeamViewer
+!F13::OpenApplication("TeamViewer.exe", EnvGet("ProgramFiles(x86)") . "\TeamViewer\")
 ; iCUE
 !F14::OpenApplication("iCUE.exe", EnvGet("ProgramFiles(x86)") . "\Corsair\CORSAIR iCUE Software\")
 ; Calculator
