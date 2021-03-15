@@ -39,7 +39,7 @@ OpenApplicationRaw(identifier, runCommand)
   windowHandleIds := WinGetList(identifier)
   if (windowHandleIds.length !== 0) {
 
-    ; select second window in list
+    ; select second window in list ...
     selectWindowIndex := 2
 
     ; ... unless any of application's windows are not in focus, then select the first window
@@ -47,7 +47,7 @@ OpenApplicationRaw(identifier, runCommand)
       selectWindowIndex := 1
     }
 
-    ; ... unless there is only 1 windo in the list, select the first (and only) window
+    ; ... unless there is only 1 window in the list, then select the first (and only) window
     if (windowHandleIds.length == 1) {
       selectWindowIndex := 1
     }
