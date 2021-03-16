@@ -55,6 +55,7 @@ OpenApplicationRaw(identifier, runCommand)
     WinActivate("ahk_id " . windowHandleIds[selectWindowIndex])
   } else {
     Run(runCommand)
+    WinWait(identifier)
     WinActivate(identifier)
   }
 }
