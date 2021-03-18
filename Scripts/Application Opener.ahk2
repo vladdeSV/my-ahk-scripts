@@ -28,6 +28,12 @@ F24::OpenApplicationRaw("ahk_exe WindowsTerminal.exe", "wt")
 !F14::OpenApplication("iCUE.exe", EnvGet("ProgramFiles(x86)") . "\Corsair\CORSAIR iCUE Software\")
 ; Calculator
 !F15::OpenApplicationRaw("Calculator", "calc.exe")
+; Affinity Photo
+!F16::OpenApplication("Photo.exe", A_ProgramFiles . "\Affinity\Photo\")
+; Affinity Designer
+!F17::OpenApplication("Designer.exe", A_ProgramFiles . "\Affinity\Designer\")
+; Affinity Publisher
+!F18::OpenApplication("Publisher.exe", A_ProgramFiles . "\Affinity\Publisher\")
 
 OpenApplication(exe, fileDirectory)
 {
