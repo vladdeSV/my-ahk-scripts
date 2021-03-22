@@ -34,6 +34,8 @@ F24::OpenApplicationRaw("ahk_exe WindowsTerminal.exe", "wt")
 !F17::OpenApplication("Designer.exe", A_ProgramFiles . "\Affinity\Designer\")
 ; Affinity Publisher
 !F18::OpenApplication("Publisher.exe", A_ProgramFiles . "\Affinity\Publisher\")
+; DaVinci Resolve
+!F19::OpenApplication("Resolve.exe", A_ProgramFiles . "\Blackmagic Design\DaVinci Resolve\")
 ; FL Studio
 !F20::OpenApplication("FL64.exe", A_ProgramFiles . "\Image-Line\FL Studio 20\")
 
