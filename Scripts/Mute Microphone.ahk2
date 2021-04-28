@@ -1,0 +1,42 @@
+#SingleInstance Force
+#Warn All
+
+!F22::
+{
+    options := [
+        ['Discord.exe', '{Ctrl down}{Shift down}{NumpadMult}{Shift up}{Ctrl up}'],
+        ['Teams.exe', '{Ctrl down}{Shift down}m{Shift up}{Ctrl up}', true],
+    ]
+
+    Mute(options)
+}
+
+Mute(options) {
+    windowIds := WinGetList()
+
+    outer:
+    for (windowId in windowIds) {
+        exe := WinGetProcessName(windowId)
+        for (option in options) {
+            windowExecutabe := option[1]
+
+            if(exe != windowExecutabe) {
+                continue
+            }
+
+            foo := option[2]
+            activateWindow := false
+
+            if(option.has(3)) {
+                activateWindow := option[3]
+            }
+
+            if(activateWindow) {
+                WinActivate("ahk_id " . windowId)
+            }
+
+            sendinput foo
+            break outer
+        }
+    }
+}
