@@ -16,3 +16,6 @@ Rewritten script which allows me to move and resize a window by only holding the
 
 ## [Hotstrings.ahk2](/Scripts/Hotstrings.ahk2)
 Simple abbr.
+
+## [Mute Microphone.ahk2](/Scripts/Mute%20Microphone.ahk2)
+Loops specific applications and sends application-specific hotkeys to mute the microphone, eg. *Discord* and *Microsoft Teams*.
