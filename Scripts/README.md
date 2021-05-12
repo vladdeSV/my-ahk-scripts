@@ -9,7 +9,7 @@ I orignially had this setup on my mac, but I got so used to it so I had to have 
 ## [Application Opener.ahk2](/Scripts/Application%20Opener.ahk2)
 Opens/shows application on input.
 
-Specific to my keyboard setup. I've bound my 6 macro keys to this.
+Specific to my keyboard setup (Corsair K95 (old model with 18 macro keys)). I've bound keyboard shortcuts to this.
 
 ## [EasyWindowDrag.ahk2](/Scripts/EasyWindowDrag.ahk2)
 Rewritten script which allows me to move and resize a window by only holding the cursor over the window and holding my Mouse4 or Mouse5.
