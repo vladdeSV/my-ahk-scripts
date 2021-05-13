@@ -1,10 +1,6 @@
 # Summary
 Breif explanation of what each script does. Might not always be up do date with all scripts.
 
-## [Alternative Keybinds.ahk2](/Scripts/Alternative%20Keybinds.ahk2)
-- Changes the <kbd>Caps-Lock</kbd> key to <kbd>Delete</kbd>. Still possible to activate by holding down a modifier key, like <kbd>Ctrl</kbd>
-- Mimics some macOS keybinds (`{`, `}`, and `@`)
-
 I orignially had this setup on my mac, but I got so used to it so I had to have it on my PC as well.
 ## [Application Opener.ahk2](/Scripts/Application%20Opener.ahk2)
 Opens/shows application on input.
