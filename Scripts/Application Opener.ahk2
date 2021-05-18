@@ -23,9 +23,9 @@ F23::OpenApplication("msedge.exe", EnvGet("ProgramFiles(x86)") . "\Microsoft\Edg
 ; Windows Terminal
 F24::OpenApplicationRaw("ahk_exe WindowsTerminal.exe", "wt")
 ; TeamViewer
-!F13::OpenApplication("TeamViewer.exe", EnvGet("ProgramFiles(x86)") . "\TeamViewer\")
+!F13::OpenApplication("TeamViewer.exe", A_ProgramFiles . "\TeamViewer\")
 ; iCUE
-!F14::OpenApplication("iCUE.exe", EnvGet("ProgramFiles(x86)") . "\Corsair\CORSAIR iCUE Software\")
+!F14::OpenApplication("iCUE.exe", A_ProgramFiles . "\Corsair\CORSAIR iCUE 4 Software\")
 ; Calculator
 !F15::OpenApplicationRaw("Calculator", "calc.exe")
 ; Affinity Photo
