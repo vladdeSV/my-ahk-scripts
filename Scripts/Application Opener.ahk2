@@ -13,7 +13,7 @@ F18::OpenApplication("Code.exe", A_AppData . "\..\Local\Programs\Microsoft VS Co
 ; Sublime Merge
 F19::OpenApplication("sublime_merge.exe", A_ProgramFiles . "\Sublime Merge\")
 ; Sublime Text
-F20::OpenApplication("sublime_text.exe", A_ProgramFiles . "\Sublime Text 3\")
+F20::OpenApplication("sublime_text.exe", A_ProgramFiles . "\Sublime Text\")
 ; Task Manager
 F21::OpenApplication("Taskmgr.exe", A_WinDir . "\System32\")
 ; Slack
