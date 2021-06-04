@@ -1,6 +1,6 @@
 :O:brg::Best regards,`nVladimirs Nordholm
 :O:mvh::Med vänliga hälsningar,`nVladimirs Nordholm ; "Best regards" in Swedish
 :::+1::👍
-!.::Send("…")
-!-::Send("–")
-!+-::Send("—")
+!.::Send("…") ; ellipsis
+!-::Send("–") ; en dash
+!+-::Send("—") ; em dash
