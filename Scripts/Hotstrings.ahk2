@@ -4,3 +4,7 @@
 !.::Send("…") ; ellipsis
 !-::Send("–") ; en dash
 !+-::Send("—") ; em dash
+!NumpadUp::Send("↑")
+!NumpadDown::Send("↓")
+!NumpadLeft::Send("←")
+!NumpadRight::Send("→")
