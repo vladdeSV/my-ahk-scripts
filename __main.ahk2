@@ -1,4 +1,5 @@
-﻿#SingleInstance force
+﻿#Requires AutoHotkey v2.0-beta.1
+#SingleInstance force
 #Warn
 
 ; Set application icon
