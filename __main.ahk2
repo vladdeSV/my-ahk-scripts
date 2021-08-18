@@ -2,7 +2,7 @@
 #Warn
 
 ; Set application icon
-#Include "__icon.ahk2"
+#Include "__icon.ahk"
 
 ; Include scripts
 #Include "Scripts\Application Opener.ahk2"
