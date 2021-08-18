@@ -26,7 +26,7 @@ RestoreWindow(windowId)
   WinRestore(ahkWindowId)
 
   ; Set window size to which ever size it was before.
-  WinMove(x, y , width, height, ahkWindowId)
+  WinMove(x, y, width, height, ahkWindowId)
 }
 
 ; Move window
