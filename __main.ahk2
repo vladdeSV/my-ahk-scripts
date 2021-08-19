@@ -8,7 +8,7 @@
 ; Include scripts
 #Include "Scripts\Application Opener.ahk2"
 #Include "Scripts\Hotstrings.ahk2"
-#Include "Scripts\Mute Microphone.ahk2"
+#Include "Scripts\Mute Microphone.ahk"
 
 ; Workaround to enable window resizing
 Run "Scripts\EasyWindowDrag.ahk2"
