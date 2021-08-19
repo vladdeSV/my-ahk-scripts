@@ -1,3 +1,5 @@
+#Requires AutoHotkey v2.0-beta.1
+
 ; Easy Window Dragging and Resizing -- by Jonny, then TaranVH, then vladdeSV (updated to AHKv2)
 ; Original script: https://autohotkey.com/docs/scripts/EasyWindowDrag_(KDE).htm
 
