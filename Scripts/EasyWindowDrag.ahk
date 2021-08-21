@@ -74,6 +74,11 @@ Xbutton2::
     cursorY2 -= cursorY1
     windowX2 := (windowX1 + cursorX2) ; Apply this offset to the window position
     windowY2 := (windowY1 + cursorY2)
+    
+    if (!WinExist(windowId)) {
+      return
+    }
+
     WinMove(windowX2, windowY2, , , windowId) ; Move the window to the new position
   }
 }
@@ -130,6 +135,10 @@ Xbutton1::
     WinGetPos(&windowX1, &windowY1, &windowW, &windowH, windowId)
     cursorX2 -= cursorX1 ; Obtain an offset from the initial mouse position
     cursorY2 -= cursorY1
+    
+    if (!WinExist(windowId)) {
+      return
+    }
 
     ; Then, act according to the defined region
     WinMove(
