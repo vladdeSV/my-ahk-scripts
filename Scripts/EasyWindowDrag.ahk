@@ -61,12 +61,12 @@ Xbutton2::
     if (GetKeyState("Xbutton1", "P") == true) {
       ; Get the window id under the cursor
       WinMaximize(windowId)
-      break
+      return
     }
 
     ; Break if button has been released
     if (GetKeyState(A_thishotkey, "P") == false) {
-      break
+      return
     }
 
     MouseGetPos(&cursorX2, &cursorY2) ; Get the current mouse position
@@ -126,7 +126,7 @@ Xbutton1::
   {
     ; Break if button has been released
     if (GetKeyState(A_thishotkey, "P") == false) {
-      break
+      return
     }
 
     MouseGetPos(&cursorX2, &cursorY2) ; Get the current mouse position
