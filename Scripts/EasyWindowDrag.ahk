@@ -16,8 +16,8 @@ DllCall("SetThreadDpiAwarenessContext", "ptr", -3, "ptr")
 ; Set icon to "double window"
 TraySetIcon("SHELL32.dll", 160, 1)
 
-RestoreWindow(windowId)
-{
+RestoreWindow(windowId) {
+
   x := 0, y := 0, width := 0, height := 0
   ahkWindowId := "ahk_id " . windowId
 
@@ -32,8 +32,8 @@ RestoreWindow(windowId)
 }
 
 ; Move window
-Xbutton2::
-{
+Xbutton2::{
+
   ; If pressing the other button, stop
   if (GetKeyState("Xbutton1", "P") == true) {
     return
@@ -55,8 +55,7 @@ Xbutton2::
   ; Get the initial window position.
   windowX1 := 0, windowY1 := 0
   WinGetPos(&windowX1, &windowY1, , , windowId)
-  loop
-  {
+  loop {
     ; Fullscreen application if other mouse button is pressed
     if (GetKeyState("Xbutton1", "P") == true) {
       ; Get the window id under the cursor
@@ -84,8 +83,8 @@ Xbutton2::
 }
 
 ; Resize window
-Xbutton1::
-{
+Xbutton1::{
+
   ; If pressing the other button, stop
   if (GetKeyState("Xbutton2", "P") == true) {
     return
@@ -122,8 +121,8 @@ Xbutton1::
     windowUp := -1
   }
 
-  loop
-  {
+  loop {
+
     ; Break if button has been released
     if (GetKeyState(A_thishotkey, "P") == false) {
       return
