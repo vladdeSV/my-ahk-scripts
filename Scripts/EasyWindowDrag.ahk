@@ -100,7 +100,7 @@ Xbutton1::{
 
   isCurrentWindoMaximized := WinGetMinMax(windowId)
   if (isCurrentWindoMaximized) {
-      return
+    return
   }
 
   ; Get the initial window position and size
@@ -141,14 +141,15 @@ Xbutton1::{
 
     ; Then, act according to the defined region
     WinMove(
-      windowX1 + (windowLeft + 1) / 2 * cursorX2, ; X of resized window
-      windowY1 + (windowUp + 1) / 2 * cursorY2, ; Y of resized window
-      windowW - windowLeft * cursorX2, ; W of resized window
-      windowH - windowUp * cursorY2, ; H of resized window
+      windowX1 + (windowLeft + 1) / 2 * cursorX2,
+      windowY1 + (windowUp + 1) / 2 * cursorY2,
+      windowW - windowLeft * cursorX2,
+      windowH - windowUp * cursorY2,
       windowId
     )
 
-    cursorX1 := (cursorX2 + cursorX1) ; Reset the initial position for the next iteration
+    ; Reset the initial position for the next iteration
+    cursorX1 := (cursorX2 + cursorX1)
     cursorY1 := (cursorY2 + cursorY1)
   }
 }
