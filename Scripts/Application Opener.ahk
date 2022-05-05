@@ -25,7 +25,7 @@ F23::OpenApplication("msedge.exe", EnvGet("ProgramFiles(x86)") . "\Microsoft\Edg
 ; Windows Terminal
 F24::OpenApplicationRaw("ahk_exe WindowsTerminal.exe", "wt")
 ; TeamViewer
-!F13::OpenApplication("TeamViewer.exe", A_ProgramFiles . "\TeamViewer\")
+!F13::OpenApplication("mstsc.exe", A_ProgramFiles . "\..\Windows\System32\")
 ; iCUE
 !F14::OpenApplication("iCUE.exe", A_ProgramFiles . "\Corsair\CORSAIR iCUE 4 Software\")
 ; Calculator
