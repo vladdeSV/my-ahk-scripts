@@ -44,6 +44,8 @@ F24::OpenApplicationRaw("ahk_exe WindowsTerminal.exe", "wt")
 !F21::OpenApplicationRaw("ahk_exe Teams.exe", A_AppData . "\..\Local\Microsoft\Teams\Update.exe --processStart Teams.exe")
 ; Mute
 ;!F22:: <already in use by mute>
+; Insomnia
+!F23::OpenApplication("Insomnia.exe", A_AppData . "\..\Local\insomnia\")
 
 OpenApplication(exe, fileDirectory)
 {
