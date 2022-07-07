@@ -2,6 +2,7 @@
 
 :O:brg::Best regards,`nVladimirs Nordholm
 :O:mvh::Med vänliga hälsningar,`nVladimirs Nordholm ; "Best regards" in Swedish
+:O:_shrug::¯\_(ツ)_/¯
 ::_date::{
     Send A_YYYY "-" A_MM "-" A_DD
 }
