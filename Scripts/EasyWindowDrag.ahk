@@ -1,4 +1,4 @@
-#Requires AutoHotkey v2.0-beta.1
+#Requires AutoHotkey v2.0
 
 ; Easy Window Dragging and Resizing -- by Jonny, then TaranVH, then vladdeSV (updated to AHKv2)
 ; Original script: https://autohotkey.com/docs/scripts/EasyWindowDrag_(KDE).htm
@@ -32,7 +32,7 @@ RestoreWindow(windowId) {
 }
 
 ; Move window
-Xbutton2::{
+Xbutton2:: {
 
   ; If pressing the other button, stop
   if (GetKeyState("Xbutton1", "P") == true) {
@@ -73,7 +73,7 @@ Xbutton2::{
     cursorY2 -= cursorY1
     windowX2 := (windowX1 + cursorX2) ; Apply this offset to the window position
     windowY2 := (windowY1 + cursorY2)
-    
+
     if (!WinExist(windowId)) {
       return
     }
@@ -83,7 +83,7 @@ Xbutton2::{
 }
 
 ; Resize window
-Xbutton1::{
+Xbutton1:: {
 
   ; If pressing the other button, stop
   if (GetKeyState("Xbutton2", "P") == true) {
@@ -134,7 +134,7 @@ Xbutton1::{
     WinGetPos(&windowX1, &windowY1, &windowW, &windowH, windowId)
     cursorX2 -= cursorX1 ; Obtain an offset from the initial mouse position
     cursorY2 -= cursorY1
-    
+
     if (!WinExist(windowId)) {
       return
     }

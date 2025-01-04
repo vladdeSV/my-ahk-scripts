@@ -1,4 +1,4 @@
-#Requires AutoHotkey v2.0-beta.1
+#Requires AutoHotkey v2.0
 
 :O:brg::Best regards,`nVladimirs Nordholm
 :O:mvh::Med vänliga hälsningar,`nVladimirs Nordholm ; "Best regards" in Swedish
